@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <label for="inacionalidade">Em qual país você nasceu? </label>
+    <input type="text" name="pais" id="ipais" >
+    <input type="button" value="Consultar" onclick="consultar()">
+    <div id="resposta"></div>
+
+    <script>
+       function consultar(){
+            pais = document.getElementById('ipais')
+            res = document.getElementById('resposta')
+            if (pais.value == '') {
+                res.innerText = `você não digitou nenhum País`
+            } 
+            else if (pais.value != 'Brasil'){
+                res.innerText = 'Estrangeiro'
+            } 
+            else {
+                res.innerText = `Brasileiro`
+            }
+            
+
+       }
+    </script>
+    
+</body>
+</html>
