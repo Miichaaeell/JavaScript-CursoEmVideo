@@ -14,9 +14,22 @@ function validar(){
         var sexo = document.getElementsByName('sexo')
         resultado = document.getElementById('resultado')
         if (sexo[0].checked) {
-            img.setAttribute('src', 'imagens/senhor.png')
-            resultado.innerText = `Detectamos um Homem com ${idade} anos.`
-            resultado.appendChild(img)
+            if (idade < 18) {
+                resultado.innerText = `Detectamos um Homem com ${idade} anos`
+                img.setAttribute('src', 'imagens/menino.png')
+                resultado.appendChild(img)
+            }
+            else if (idade < 50 && idade >= 18) {
+                resultado.innerText = `Detectamos um Homem com ${idade} anos`
+                img.setAttribute('src', 'imagens/moço.png')
+                resultado.appendChild(img)
+            }
+            
+            else if (idade >= 50){
+                resultado.innerText = `Detectamos um Homem com ${idade} anos.`
+                img.setAttribute('src', 'imagens/senhor.png')
+                resultado.appendChild(img)
+            }
         } else if (sexo[1].checked) {
             resultado.innerText = `Detecamos uma Mulher com ${idade} anos`
         }
