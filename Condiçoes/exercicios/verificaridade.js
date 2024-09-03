@@ -30,9 +30,25 @@ function validar(){
                 img.setAttribute('src', 'imagens/senhor.png')
                 resultado.appendChild(img)
             }
-        } else if (sexo[1].checked) {
-            resultado.innerText = `Detecamos uma Mulher com ${idade} anos`
+        } 
+        else if (sexo[1].checked) {
+            if (idade < 18){
+                resultado.innerText = `Detecamos uma Mulher com ${idade} anos`
+                img.setAttribute('src', 'imagens/menina.jpg')
+                resultado.appendChild(img)
+            }
+            else if (idade >= 18 && idade < 50){
+                resultado.innerText = `Detectamos uma Mulher com ${idade} anos`
+                img.setAttribute('src', 'imagens/moça.png')
+                resultado.appendChild(img)}
+            else if (idade >= 50) {
+                resultado.innerText = `Detectamos uma Mulher com ${idade} anos`
+                img.setAttribute('src', 'imagens/senhora.jpg')
+                resultado.appendChild(img)
+            }
+
+            }
+            
         }
         
     }
-}
