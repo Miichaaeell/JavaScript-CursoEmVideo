@@ -12,43 +12,34 @@ function validar(){
     else {
         idade = anoatual - ano.value
         var sexo = document.getElementsByName('sexo')
+        var genero = ''
         resultado = document.getElementById('resultado')
         if (sexo[0].checked) {
-            if (idade < 18) {
-                resultado.innerText = `Detectamos um Homem com ${idade} anos`
+            genero = 'Homem'
+            if (idade < 18) {   
                 img.setAttribute('src', 'imagens/menino.png')
-                resultado.appendChild(img)
             }
             else if (idade < 50 && idade >= 18) {
-                resultado.innerText = `Detectamos um Homem com ${idade} anos`
                 img.setAttribute('src', 'imagens/moço.png')
-                resultado.appendChild(img)
             }
-            
             else if (idade >= 50){
-                resultado.innerText = `Detectamos um Homem com ${idade} anos.`
                 img.setAttribute('src', 'imagens/senhor.png')
-                resultado.appendChild(img)
             }
         } 
         else if (sexo[1].checked) {
+            genero = 'Mulher'
             if (idade < 18){
-                resultado.innerText = `Detecamos uma Mulher com ${idade} anos`
                 img.setAttribute('src', 'imagens/menina.jpg')
-                resultado.appendChild(img)
             }
             else if (idade >= 18 && idade < 50){
-                resultado.innerText = `Detectamos uma Mulher com ${idade} anos`
-                img.setAttribute('src', 'imagens/moça.png')
-                resultado.appendChild(img)}
+                img.setAttribute('src', 'imagens/moça.jpg')
+            }
             else if (idade >= 50) {
-                resultado.innerText = `Detectamos uma Mulher com ${idade} anos`
                 img.setAttribute('src', 'imagens/senhora.jpg')
-                resultado.appendChild(img)
             }
-
-            }
-            
+        }
+        resultado.innerText =  `Detectamos um ${genero} com ${idade} anos.`
+        resultado.appendChild(img)
         }
         
     }
