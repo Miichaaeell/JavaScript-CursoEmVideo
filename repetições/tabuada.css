@@ -1,0 +1,40 @@
+@charset "utf-8";
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: rgba(12, 48, 167, 0.815);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    color: white;
+    margin-bottom: 10px;
+}
+section {
+    background-color: white;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0px 20px 0px;
+}
+section p {
+    margin: 20px 0px 20px 0px;
+}
+select {
+    width: 180px;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.493);
+}
+option{
+    text-align: center;
+}
+footer{
+    color: white;
+}

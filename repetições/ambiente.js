@@ -8,3 +8,7 @@ do {
     console.log(c)
     c--
 } while (c != 0)
+
+  for (c=0; c <= 6; c++) {
+    console.log(c)
+  }
