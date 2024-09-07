@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="analisador.css">
+    <title>Analisador de numeros</title>
+</head>
+<body>
+    <header><h1>Analisador de Números</h1></header>
+    <section>
+        <p>Número (entre 1 a 100) 
+            <input type="number" name="numero" id="inumero">
+            <input type="button" value="Adicionar" id="adicionar" onclick="adicionar()">
+        </p>
+        <p><select name="list" id="ilist" size="8">
+        </select></p>
+        <p>
+            <input type="button" value="Finalizar" onclick="analisar()" id="finalizar"> 
+            <input type="button" value="Apagar" id="apagar" onclick="apagar()">
+            <input type="button" value="Reset" id="reset" onclick="resetar()">
+        </p>
+        
+        <p id="resposta"></p>
+    </section>
+    <footer><h3>CursoemVideo</h3></footer>
+
+    <script src="analisador.js"></script>
+</body>
+</html>

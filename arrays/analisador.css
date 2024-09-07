@@ -1,0 +1,42 @@
+@charset "utf-8";
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: lightblue;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    background-color: white;
+    width: 500px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.521);
+}
+section > p {
+    margin: 10px 0px 10px 0px;
+}
+
+select {
+    width: 200px;
+}
+select > option {
+    margin: 5px 0px 0px 5px;
+}
+input#finalizar {
+    margin-top: 10px;
+    padding: 4px;
+}
+input#adicionar, input#reset, input#apagar {
+    padding: 4px;
+    margin-left: 10px;
+}
